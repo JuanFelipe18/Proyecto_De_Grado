@@ -1,0 +1,183 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="848.0" height="498.0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<g id="frame_graph_1" class="visualization">
+<rect x="0" y="0" width="848" height="498" stroke="none" fill="white"/>
+<g id="frame_data_1" class="graph">
+<rect x="8.48" y="4.98" width="831.04" height="488.04" stroke="none" fill="white"/>
+<rect x="51.73" y="4.98" width="787.79" height="378.79" stroke="none" fill="white"/>
+<g id="gridline_1031223" class="gridline-majorGridLines">
+<line x1="51.73" y1="383.77" x2="839.52" y2="383.77" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="347.78" x2="839.52" y2="347.78" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="311.8" x2="839.52" y2="311.8" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="275.81" x2="839.52" y2="275.81" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="239.83" x2="839.52" y2="239.83" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="203.84" x2="839.52" y2="203.84" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="167.86" x2="839.52" y2="167.86" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="131.87" x2="839.52" y2="131.87" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="95.89" x2="839.52" y2="95.89" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="59.9" x2="839.52" y2="59.9" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+<line x1="51.73" y1="23.92" x2="839.52" y2="23.92" stroke="#aeaeae" fill="none" stroke-width="1.0"/>
+</g>
+<g id="axis_axisx_1" class="axis-baseline">
+<path d="M51.73 383.77 L839.52 383.77" stroke="black" fill="none"/>
+<text x="388.77" y="-756.59" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MMeñiqueIzq</text><text x="388.77" y="-685.69" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MAnularIzq</text><text x="388.77" y="-614.79" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MMedioIzq</text><text x="388.77" y="-543.89" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MIndiceIzq</text><text x="388.77" y="-472.99" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MPulgarIzq</text><text x="388.77" y="-402.09" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MMeñiqueDer</text><text x="388.77" y="-331.19" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MAnularDer</text><text x="388.77" y="-260.29" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MMedioDer</text><text x="388.77" y="-189.39" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MIndiceDer</text><text x="388.77" y="-118.48" fill="black" font-family="SansSerif" font-size="16" transform="matrix(0 1 -1 0 0 0)">MPulgarDer</text></g>
+<g id="axis_axisy_1" class="axis-baseline">
+<path d="M51.73 4.98 L51.73 383.77" stroke="black" fill="none"/>
+<text x="13.73" y="29.3" fill="black" font-family="SansSerif" font-size="11">180,00</text><text x="13.73" y="65.28" fill="black" font-family="SansSerif" font-size="11">178,00</text><text x="13.73" y="101.27" fill="black" font-family="SansSerif" font-size="11">176,00</text><text x="13.73" y="137.25" fill="black" font-family="SansSerif" font-size="11">174,00</text><text x="13.73" y="173.24" fill="black" font-family="SansSerif" font-size="11">172,00</text><text x="13.73" y="209.22" fill="black" font-family="SansSerif" font-size="11">170,00</text><text x="13.73" y="245.21" fill="black" font-family="SansSerif" font-size="11">168,00</text><text x="13.73" y="281.19" fill="black" font-family="SansSerif" font-size="11">166,00</text><text x="13.73" y="317.18" fill="black" font-family="SansSerif" font-size="11">164,00</text><text x="13.73" y="353.17" fill="black" font-family="SansSerif" font-size="11">162,00</text><text x="13.73" y="389.15" fill="black" font-family="SansSerif" font-size="11">160,00</text></g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M122.14 186.93 L131 186.93 Z M126.57 186.93 L126.57 24.1 Z M122.14 24.1 L131 24.1 Z" stroke="none" fill="#31afff"/>
+<path d="M122.14 186.93 L131 186.93 Z M126.57 186.93 L126.57 24.1 Z M122.14 24.1 L131 24.1 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M135.43 126.12 L135.43 26.98 L117.71 26.98 L117.71 126.12 L135.43 126.12 Z" stroke="none" fill="#31afff"/>
+<path d="M135.43 126.12 L135.43 26.98 L117.71 26.98 L117.71 126.12 L135.43 126.12 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M117.71 54.6 L135.43 54.6 Z" stroke="none" fill="black"/>
+<path d="M117.71 54.6 L135.43 54.6 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M193.04 36.15 L201.9 36.15 Z M197.47 36.15 L197.47 24.1 Z M193.04 24.1 L201.9 24.1 Z" stroke="none" fill="#31afff"/>
+<path d="M193.04 36.15 L201.9 36.15 Z M197.47 36.15 L197.47 24.1 Z M193.04 24.1 L201.9 24.1 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M206.33 29.86 L206.33 24.28 L188.61 24.28 L188.61 29.86 L206.33 29.86 Z" stroke="none" fill="#31afff"/>
+<path d="M206.33 29.86 L206.33 24.28 L188.61 24.28 L188.61 29.86 L206.33 29.86 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M188.61 24.64 L206.33 24.64 Z" stroke="none" fill="black"/>
+<path d="M188.61 24.64 L206.33 24.64 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M263.94 26.8 L272.8 26.8 Z M268.37 26.8 L268.37 23.92 Z M263.94 23.92 L272.8 23.92 Z" stroke="none" fill="#31afff"/>
+<path d="M263.94 26.8 L272.8 26.8 Z M268.37 26.8 L268.37 23.92 Z M263.94 23.92 L272.8 23.92 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M277.23 25.72 L277.23 24.1 L259.51 24.1 L259.51 25.72 L277.23 25.72 Z" stroke="none" fill="#31afff"/>
+<path d="M277.23 25.72 L277.23 24.1 L259.51 24.1 L259.51 25.72 L277.23 25.72 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M259.51 24.64 L277.23 24.64 Z" stroke="none" fill="black"/>
+<path d="M259.51 24.64 L277.23 24.64 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M334.84 111 L343.7 111 Z M339.27 111 L339.27 25 Z M334.84 25 L343.7 25 Z" stroke="none" fill="#31afff"/>
+<path d="M334.84 111 L343.7 111 Z M339.27 111 L339.27 25 Z M334.84 25 L343.7 25 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M348.14 83.47 L348.14 28.78 L330.41 28.78 L330.41 83.47 L348.14 83.47 Z" stroke="none" fill="#31afff"/>
+<path d="M348.14 83.47 L348.14 28.78 L330.41 28.78 L330.41 83.47 L348.14 83.47 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M330.41 51.18 L348.14 51.18 Z" stroke="none" fill="black"/>
+<path d="M330.41 51.18 L348.14 51.18 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M405.74 169.84 L414.61 169.84 Z M410.17 169.84 L410.17 23.92 Z M405.74 23.92 L414.61 23.92 Z" stroke="none" fill="#31afff"/>
+<path d="M405.74 169.84 L414.61 169.84 Z M410.17 169.84 L410.17 23.92 Z M405.74 23.92 L414.61 23.92 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M419.04 147.53 L419.04 24.64 L401.31 24.64 L401.31 147.53 L419.04 147.53 Z" stroke="none" fill="#31afff"/>
+<path d="M419.04 147.53 L419.04 24.64 L401.31 24.64 L401.31 147.53 L419.04 147.53 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M401.31 29.59 L419.04 29.59 Z" stroke="none" fill="black"/>
+<path d="M401.31 29.59 L419.04 29.59 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M476.64 324.39 L485.51 324.39 Z M481.08 324.39 L481.08 23.92 Z M476.64 23.92 L485.51 23.92 Z" stroke="none" fill="#31afff"/>
+<path d="M476.64 324.39 L485.51 324.39 Z M481.08 324.39 L481.08 23.92 Z M476.64 23.92 L485.51 23.92 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M489.94 260.16 L489.94 153.83 L472.21 153.83 L472.21 260.16 L489.94 260.16 Z" stroke="none" fill="#31afff"/>
+<path d="M489.94 260.16 L489.94 153.83 L472.21 153.83 L472.21 260.16 L489.94 260.16 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M472.21 197.82 L489.94 197.82 Z" stroke="none" fill="black"/>
+<path d="M472.21 197.82 L489.94 197.82 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M547.55 342.57 L556.41 342.57 Z M551.98 342.57 L551.98 64.22 Z M547.55 64.22 L556.41 64.22 Z" stroke="none" fill="#31afff"/>
+<path d="M547.55 342.57 L556.41 342.57 Z M551.98 342.57 L551.98 64.22 Z M547.55 64.22 L556.41 64.22 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M560.84 289.31 L560.84 191.97 L543.11 191.97 L543.11 289.31 L560.84 289.31 Z" stroke="none" fill="#31afff"/>
+<path d="M560.84 289.31 L560.84 191.97 L543.11 191.97 L543.11 289.31 L560.84 289.31 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M543.11 240.91 L560.84 240.91 Z" stroke="none" fill="black"/>
+<path d="M543.11 240.91 L560.84 240.91 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M618.45 123.06 L627.31 123.06 Z M622.88 123.06 L622.88 23.92 Z M618.45 23.92 L627.31 23.92 Z" stroke="none" fill="#31afff"/>
+<path d="M618.45 123.06 L627.31 123.06 Z M622.88 123.06 L622.88 23.92 Z M618.45 23.92 L627.31 23.92 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M631.74 86.53 L631.74 24.82 L614.02 24.82 L614.02 86.53 L631.74 86.53 Z" stroke="none" fill="#31afff"/>
+<path d="M631.74 86.53 L631.74 24.82 L614.02 24.82 L614.02 86.53 L631.74 86.53 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M614.02 39.75 L631.74 39.75 Z" stroke="none" fill="black"/>
+<path d="M614.02 39.75 L631.74 39.75 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M689.35 193.95 L698.21 193.95 Z M693.78 193.95 L693.78 23.92 Z M689.35 23.92 L698.21 23.92 Z" stroke="none" fill="#31afff"/>
+<path d="M689.35 193.95 L698.21 193.95 Z M693.78 193.95 L693.78 23.92 Z M689.35 23.92 L698.21 23.92 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M702.64 140.51 L702.64 65.3 L684.92 65.3 L684.92 140.51 L702.64 140.51 Z" stroke="none" fill="#31afff"/>
+<path d="M702.64 140.51 L702.64 65.3 L684.92 65.3 L684.92 140.51 L702.64 140.51 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M684.92 88.6 L702.64 88.6 Z" stroke="none" fill="black"/>
+<path d="M684.92 88.6 L702.64 88.6 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-fence">
+<path d="M760.25 263.22 L769.11 263.22 Z M764.68 263.22 L764.68 57.03 Z M760.25 57.03 L769.11 57.03 Z" stroke="none" fill="#31afff"/>
+<path d="M760.25 263.22 L769.11 263.22 Z M764.68 263.22 L764.68 57.03 Z M760.25 57.03 L769.11 57.03 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-hinge">
+<path d="M773.54 204.38 L773.54 139.61 L755.82 139.61 L755.82 204.38 L773.54 204.38 Z" stroke="none" fill="#31afff"/>
+<path d="M773.54 204.38 L773.54 139.61 L755.82 139.61 L755.82 204.38 L773.54 204.38 Z" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-median">
+<path d="M755.82 172.27 L773.54 172.27 Z" stroke="none" fill="black"/>
+<path d="M755.82 172.27 L773.54 172.27 Z" stroke="black" fill="none" stroke-width="2.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-outlier">
+<ellipse cx="268.37" cy="28.42" rx="3.33" ry="3.33" stroke="none" fill="none"/>
+<ellipse cx="268.37" cy="28.42" rx="3.33" ry="3.33" stroke="black" fill="none" stroke-width="1.0"/>
+<ellipse cx="551.98" cy="37.59" rx="3.33" ry="3.33" stroke="none" fill="none"/>
+<ellipse cx="551.98" cy="37.59" rx="3.33" ry="3.33" stroke="black" fill="none" stroke-width="1.0"/>
+<ellipse cx="764.68" cy="24.1" rx="3.33" ry="3.33" stroke="none" fill="none"/>
+<ellipse cx="764.68" cy="24.1" rx="3.33" ry="3.33" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-extreme">
+<path d="M197.47 81.32 L197.47 77.98 M197.47 81.32 L200.64 80.29 M197.47 81.32 L199.43 84.01 M197.47 81.32 L195.51 84.01 M197.47 81.32 L194.3 80.29" stroke="black" fill="none" stroke-width="1.0"/>
+<path d="M197.47 76.1 L197.47 72.76 M197.47 76.1 L200.64 75.07 M197.47 76.1 L199.43 78.79 M197.47 76.1 L195.51 78.79 M197.47 76.1 L194.3 75.07" stroke="black" fill="none" stroke-width="1.0"/>
+<path d="M197.47 59.36 L197.47 56.03 M197.47 59.36 L200.64 58.33 M197.47 59.36 L199.43 62.06 M197.47 59.36 L195.51 62.06 M197.47 59.36 L194.3 58.33" stroke="black" fill="none" stroke-width="1.0"/>
+<path d="M268.37 40.47 L268.37 37.14 M268.37 40.47 L271.54 39.44 M268.37 40.47 L270.33 43.17 M268.37 40.47 L266.41 43.17 M268.37 40.47 L265.2 39.44" stroke="black" fill="none" stroke-width="1.0"/>
+</g>
+<g id="elementGroup_boxplot_1" class="schema-Labeling">
+<rect x="272.54" y="24.28" width="8" height="15.4" stroke="none" fill="none"/>
+<rect x="272.54" y="24.28" width="8" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="273.54" y="36" fill="black" font-family="SansSerif" font-size="11">2</text><rect x="200.06" y="41.76" width="14" height="15.4" stroke="none" fill="none"/>
+<rect x="200.06" y="41.76" width="14" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="201.06" y="53.47" fill="black" font-family="SansSerif" font-size="11">11</text><rect x="201.64" y="59.91" width="8" height="15.4" stroke="none" fill="none"/>
+<rect x="201.64" y="59.91" width="8" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="202.64" y="71.62" fill="black" font-family="SansSerif" font-size="11">4</text><rect x="199.72" y="83.14" width="14" height="15.4" stroke="none" fill="none"/>
+<rect x="199.72" y="83.14" width="14" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="200.72" y="94.85" fill="black" font-family="SansSerif" font-size="11">14</text><rect x="769.01" y="8.06" width="8" height="15.4" stroke="none" fill="none"/>
+<rect x="769.01" y="8.06" width="8" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="770.01" y="19.78" fill="black" font-family="SansSerif" font-size="11">2</text><rect x="556.31" y="21.56" width="8" height="15.4" stroke="none" fill="none"/>
+<rect x="556.31" y="21.56" width="8" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="557.31" y="33.27" fill="black" font-family="SansSerif" font-size="11">3</text><rect x="258.01" y="10.65" width="8" height="15.4" stroke="none" fill="none"/>
+<rect x="258.01" y="10.65" width="8" height="15.4" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<text x="259.01" y="22.36" fill="black" font-family="SansSerif" font-size="11">6</text><rect x="51.73" y="4.98" width="787.79" height="378.79" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+<rect x="8.48" y="4.98" width="831.04" height="488.04" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+</g>
+</g>
+<rect x="0" y="0" width="848" height="498" stroke="none" fill="none" stroke-width="1.0" stroke-opacity="0"/>
+</g>
+</svg>
