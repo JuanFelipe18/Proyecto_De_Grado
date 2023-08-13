@@ -1,0 +1,103 @@
+#TRAYECTORIA PRUEBA 3, SUJETO 1, 22 AÑOS, HOMBRE
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
+import matplotlib.pyplot as plt
+import pandas as pd
+import math
+import os
+
+lista_excel = []
+i=0
+
+# Crear una lista para almacenar las figuras individuales
+figuras_individuales = []
+
+# Crear una lista para almacenar las coordenadas de todos los dedos
+coordenadas_totales = []
+
+# Crear una figura para mostrar todas las trayectorias juntas
+figura_conjunta = plt.figure(figsize=(8, 6))
+ax_conjunta = figura_conjunta.add_subplot(111)
+
+# Longitudes de las falanges
+La = [4.5, 5.0, 5.3, 3.7]  # Longitud del proximal
+Lb = [3.0, 3.1, 3.6, 2.2]  # Longitud del medial
+Lc = [2.3, 2.4, 2.5, 2.0]  # Longitud del distal
+
+for archivo in os.listdir(os.getcwd()):
+    if archivo.endswith(('.xlsx')):
+        nombre_sin_extension = os.path.splitext(archivo)[0]
+        lista_excel.append(nombre_sin_extension)
+
+print(lista_excel)
+# Cargar los datos desde el DataFrame (ajusta el nombre y las columnas según tus datos)
+
+for doc in lista_excel:
+    angulos_df = pd.read_excel(doc+'.xlsx')
+
+    #[Anular, Indice, Medio, Meñique, Pulgar]
+    
+    if doc == 'Pulgar':
+        # Longitudes de las falanges pulgar
+        L1 = 4.0  # Longitud del proximal
+        L2 = 0  # Longitud del distal
+        L3 = 3.2  # Longitud del distal
+    else:
+        L1 = La[i]  # Longitud del proximal
+        L2 = Lb[i]  # Longitud del medial
+        L3 = Lc[i]  # Longitud del distal
+
+    # Inicializar una lista para almacenar las coordenadas (x, y) de la punta del tercer eslabón
+    coordenadas = []
+    print(doc)
+    # Iterar a través de las filas del DataFrame y calcular las coordenadas de P3 para cada fila
+    for index, row in angulos_df.iterrows():
+    
+        theta1 = row.iloc[2]-90  # Ángulo del proximal
+        theta2 = row.iloc[1]+theta1-180  # Ángulo del medial
+        theta3 = row.iloc[0]+theta2-180  # Ángulo del distal
+
+        
+        theta1 = math.radians(theta1)
+        theta2 = math.radians(theta2)
+        theta3 = math.radians(theta3)
+        
+        # Calcular las coordenadas (x, y) de la punta del tercer eslabón (P3)
+        y = L1 * math.cos(theta1) + L2 * math.cos(theta1 + theta2) + L3 * math.cos(theta1 + theta2 + theta3)
+        x = L1 * math.sin(theta1) + L2 * math.sin(theta1 + theta2) + L3 * math.sin(theta1 + theta2 + theta3)
+        
+        coordenadas.append((x, y))
+
+    # Crear un nuevo DataFrame con las coordenadas calculadas
+    coordenadas_df = pd.DataFrame(coordenadas, columns=['Coordenada X', 'Coordenada Y'])
+
+    # Agregar las coordenadas al DataFrame original
+    resultado_df = pd.concat([angulos_df, coordenadas_df], axis=1)
+    i += 1
+
+    # Crear una figura para cada dedo y almacenarla en la lista
+    fig_individual = plt.figure(figsize=(8, 6))
+    ax_individual = fig_individual.add_subplot(111)
+    ax_individual.plot(coordenadas_df['Coordenada X'], coordenadas_df['Coordenada Y'], marker='o')
+    ax_individual.set_title('Trayectoria del dedo ' + doc + ' durante la prueba 3')
+    ax_individual.set_xlabel('Coordenada X')
+    ax_individual.set_ylabel('Coordenada Y')
+    ax_individual.grid()
+    figuras_individuales.append(fig_individual)
+
+    # Guardar las coordenadas en la lista
+    coordenadas_totales.append(coordenadas_df[['Coordenada X', 'Coordenada Y']].values)
+
+# Graficar la gráfica conjunta directamente desde la lista de coordenadas
+for coordenadas in coordenadas_totales:
+    ax_conjunta.plot(coordenadas[:, 0], coordenadas[:, 1], marker='o')
+
+# Ajustar posición de leyendas y nombres de dedos en la figura conjunta
+ax_conjunta.set_title('Trayectorias de los dedos durante la prueba 3')
+ax_conjunta.legend(lista_excel)
+ax_conjunta.set_xlabel('Coordenada X (cm)')
+ax_conjunta.set_ylabel('Coordenada Y (cm)')
+ax_conjunta.grid()
+
+plt.tight_layout()
+plt.savefig('trayectorias_conjuntas.svg', format='svg')
+plt.show()
