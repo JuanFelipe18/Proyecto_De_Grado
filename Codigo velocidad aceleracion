@@ -1,0 +1,41 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Cargar los datos desde el archivo Excel
+angD_dtf = pd.read_excel('Angulos Proximal.xlsx')
+
+# Graficar los cambios de grados en función del tiempo para cada dedo
+for dedo in angD_dtf.columns:
+    cambios_de_grado = angD_dtf[dedo]
+
+    # Crear una figura para cada dedo
+    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, sharex=True, figsize=(10, 8))
+
+    # Graficar la trayectoria de cambios de grados
+    ax1.plot(range(len(cambios_de_grado)), cambios_de_grado, label='Trayectoria')
+    ax1.set_ylabel('Cambios de Grado')
+    ax1.legend()
+
+    # Calcular la primera derivada (velocidad de cambio)
+    primera_derivada = np.gradient(cambios_de_grado)
+    ax2.plot(range(len(primera_derivada)), primera_derivada, linestyle='dashed', label='1ra Derivada')
+    ax2.set_ylabel('1ra Derivada')
+    ax2.legend()
+
+    # Calcular la segunda derivada (aceleración de cambio)
+    segunda_derivada = np.gradient(primera_derivada)
+    ax3.plot(range(len(segunda_derivada)), segunda_derivada, linestyle='dotted', label='2da Derivada')
+    ax3.set_xlabel('Tiempo')
+    ax3.set_ylabel('2da Derivada')
+    ax3.legend()
+
+    # Configurar título para el dedo actual
+    ax1.set_title(f'Análisis de {dedo}')
+    
+    # Ajustar espacios entre subgráficos
+    plt.tight_layout()
+
+    # Mostrar el gráfico para el dedo actual
+    #plt.show()
+    plt.savefig('Analisis proximal de '+dedo+'.svg', format='svg')
