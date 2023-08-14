@@ -1,0 +1,40 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Cargar los datos desde el archivo Excel
+excel_file = 'Medio.xlsx'
+data = pd.read_excel(excel_file)
+
+# Extraer ángulos de articulación de cada falange
+angulos_falange_distal = np.radians(data['DISTAL'])
+angulos_falange_media = np.radians(data['MEDIAL'])
+angulos_falange_proximal = np.radians(data['PROXIMAL'])
+
+# Longitudes de las falanges
+longitud_falange_distal = 25  # Ejemplo de longitud en unidades arbitrarias
+longitud_falange_media = 36
+longitud_falange_proximal = 53
+
+# Calcular las posiciones 3D de los extremos de las falanges
+x = longitud_falange_distal * np.cos(angulos_falange_distal) + \
+    longitud_falange_media * np.cos(angulos_falange_media) + \
+    longitud_falange_proximal * np.cos(angulos_falange_proximal)
+
+y = longitud_falange_distal * np.sin(angulos_falange_distal) + \
+    longitud_falange_media * np.sin(angulos_falange_media) + \
+    longitud_falange_proximal * np.sin(angulos_falange_proximal)
+
+z = np.zeros_like(x)  # Supongamos que el dedo se encuentra en el plano xy
+
+# Visualizar el espacio de trabajo tridimensional
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(x, y, z, c='b', marker='o')
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('Espacio de Trabajo Tridimensional del Dedo')
+
+plt.show()

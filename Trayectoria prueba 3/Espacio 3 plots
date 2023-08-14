@@ -1,0 +1,55 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Cargar los datos desde el archivo Excel
+excel_file = 'Medio.xlsx'
+data = pd.read_excel(excel_file)
+
+# Extraer ángulos de articulación de cada falange
+angulos_falange_distal = np.radians(data['DISTAL'])
+angulos_falange_media = np.radians(data['MEDIAL'])
+angulos_falange_proximal = np.radians(data['PROXIMAL'])
+
+# Longitudes de las falanges
+longitud_falange_distal = 25  # Ejemplo de longitud en unidades arbitrarias
+longitud_falange_media = 36
+longitud_falange_proximal = 53
+
+# Calcular las posiciones 2D de los extremos de cada falange
+x_distal = longitud_falange_distal * np.cos(angulos_falange_distal)
+y_distal = longitud_falange_distal * np.sin(angulos_falange_distal)
+
+x_media = longitud_falange_media * np.cos(angulos_falange_media)
+y_media = longitud_falange_media * np.sin(angulos_falange_media)
+
+x_proximal = longitud_falange_proximal * np.cos(angulos_falange_proximal)
+y_proximal = longitud_falange_proximal * np.sin(angulos_falange_proximal)
+
+# Visualizar el espacio de trabajo de cada falange en 2D
+plt.figure(figsize=(10, 5))
+
+plt.subplot(1, 3, 1)
+plt.scatter(x_distal, y_distal, c='b', marker='o')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Espacio de Trabajo Falange Distal')
+plt.grid(True)
+
+plt.subplot(1, 3, 2)
+plt.scatter(x_media, y_media, c='g', marker='o')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Espacio de Trabajo Falange Media')
+plt.grid(True)
+
+plt.subplot(1, 3, 3)
+plt.scatter(x_proximal, y_proximal, c='r', marker='o')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Espacio de Trabajo Falange Proximal')
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()

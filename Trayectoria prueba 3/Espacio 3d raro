@@ -1,0 +1,41 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # Para la representación 3D
+
+# Cargar datos desde un archivo Excel (asegúrate de tener el archivo "datos.xlsx" en el mismo directorio)
+df = pd.read_excel('Medio.xlsx', header=None)  # Sin nombres de columna
+
+# Asignar nombres de columna
+column_names = ['Tiempo', 'Art. Distal', 'Art. Medial', 'Art. Proximal']
+df.columns = column_names
+
+# Visualización Preliminar: Graficar ángulos de articulaciones a lo largo del tiempo
+plt.figure(figsize=(10, 6))
+for col in df.columns[1:]:
+    plt.plot(df['Tiempo'], df[col], label=col)
+plt.xlabel('Tiempo')
+plt.ylabel('Ángulos')
+plt.title('Ángulos de Articulaciones a lo largo del Tiempo')
+plt.legend()
+plt.show()
+
+# Cálculo de Rango de Movimiento por Articulación
+for col in df.columns[1:]:
+    df[f'Rango_{col}'] = df[col].max() - df[col].min()
+
+# Identificación de Posiciones Extremas
+posiciones_extremas = df[df['Art. Distal'] == df['Art. Distal'].max()]
+
+# Análisis de Coordinación Interarticular
+df['Diferencia_Distal_Medial'] = df['Art. Distal'] - df['Art. Medial']
+df['Diferencia_Medial_Proximal'] = df['Art. Medial'] - df['Art. Proximal']
+
+# Representación Gráfica del Espacio de Trabajo en 3D
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(df['Art. Distal'], df['Art. Medial'], df['Art. Proximal'])
+ax.set_xlabel('Art. Distal')
+ax.set_ylabel('Art. Medial')
+ax.set_zlabel('Art. Proximal')
+ax.set_title('Espacio de Trabajo del Dedo')
+plt.show()

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Cargar los datos desde el archivo Excel
-angD_dtf = pd.read_excel('Angulos Proximal.xlsx')
+angD_dtf = pd.read_excel('Angulos Distal.xlsx')
 
 # Graficar los cambios de grados en función del tiempo para cada dedo
 for dedo in angD_dtf.columns:
@@ -17,17 +17,20 @@ for dedo in angD_dtf.columns:
     ax1.set_ylabel('Cambios de Grado')
     ax1.legend()
 
-    # Calcular la primera derivada (velocidad de cambio)
-    primera_derivada = np.gradient(cambios_de_grado)
-    ax2.plot(range(len(primera_derivada)), primera_derivada, linestyle='dashed', label='1ra Derivada')
-    ax2.set_ylabel('1ra Derivada')
+    # Calcular la primera derivada en grados por unidad de tiempo
+    primera_derivada_grados = np.diff(cambios_de_grado)
+
+    # Calcular la velocidad en radianes por unidad de tiempo (convertir a radianes)
+    velocidad_radianes = np.radians(primera_derivada_grados)
+    ax2.plot(range(len(velocidad_radianes)), velocidad_radianes, linestyle='dashed', label='Velocidad')
+    ax2.set_ylabel('Velocidad (rad/s)')
     ax2.legend()
 
-    # Calcular la segunda derivada (aceleración de cambio)
-    segunda_derivada = np.gradient(primera_derivada)
-    ax3.plot(range(len(segunda_derivada)), segunda_derivada, linestyle='dotted', label='2da Derivada')
+    # Calcular la segunda derivada en radianes por unidad de tiempo
+    segunda_derivada_radianes = np.diff(velocidad_radianes)
+    ax3.plot(range(len(segunda_derivada_radianes)), segunda_derivada_radianes, linestyle='dotted', label='Aceleración')
     ax3.set_xlabel('Tiempo')
-    ax3.set_ylabel('2da Derivada')
+    ax3.set_ylabel('Aceleración (rad/s^2)')
     ax3.legend()
 
     # Configurar título para el dedo actual
@@ -38,4 +41,4 @@ for dedo in angD_dtf.columns:
 
     # Mostrar el gráfico para el dedo actual
     #plt.show()
-    plt.savefig('Analisis proximal de '+dedo+'.svg', format='svg')
+    plt.savefig('Analisis distal de '+dedo+'.svg', format='svg')
