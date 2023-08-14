@@ -1,0 +1,47 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Cargar los datos desde el archivo Excel
+doc = 'Menique'
+excel_file = doc+'.xlsx'
+data = pd.read_excel(excel_file)
+
+# Extraer ángulos de articulación de cada falange
+angulos_falange_distal = np.radians(data['DISTAL'])
+angulos_falange_medial = np.radians(data['MEDIAL'])
+angulos_falange_proximal = np.radians(data['PROXIMAL'])
+
+# Longitudes de las falanges
+longitud_falange_distal = 20  # Ejemplo de longitud en unidades arbitrarias
+longitud_falange_medial = 22
+longitud_falange_proximal = 37
+
+# Calcular las posiciones 2D de los extremos de cada falange
+x_proximal = longitud_falange_proximal * np.cos(angulos_falange_proximal)
+y_proximal = longitud_falange_proximal * np.sin(angulos_falange_proximal)
+
+x_medial = x_proximal + longitud_falange_medial * np.cos(angulos_falange_medial)
+y_medial = y_proximal + longitud_falange_medial * np.sin(angulos_falange_medial)
+
+x_distal = x_medial + longitud_falange_distal * np.cos(angulos_falange_distal)
+y_distal = y_medial + longitud_falange_distal * np.sin(angulos_falange_distal)
+
+# Crear una figura para combinar las tres gráficas
+plt.figure(figsize=(10, 5))
+
+# Gráfica 1: Espacio de trabajo Falange Distal
+plt.scatter(x_distal, y_distal, c='b', marker='o', label='Falange Distal')
+
+# Gráfica 2: Espacio de trabajo Falange medial
+plt.scatter(x_medial, y_medial, c='g', marker='o', label='Falange Medial')
+
+# Gráfica 3: Espacio de trabajo Falange Proximal
+plt.scatter(x_proximal, y_proximal, c='r', marker='o', label='Falange Proximal')
+
+plt.xlabel('Coordenadas X (mm)')
+plt.ylabel('Coordenadas Y (mm)')
+plt.title('Espacio de Trabajo de las Falanges del dedo '+doc)
+plt.legend()
+plt.grid(True)
+plt.savefig('Espacio de trabajo '+doc+'.svg', format='svg')
